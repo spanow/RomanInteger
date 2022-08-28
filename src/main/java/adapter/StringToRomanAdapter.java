@@ -1,6 +1,6 @@
 package adapter;
 
-import models.Roman;
+import languages.Roman;
 
 public class StringToRomanAdapter {
 

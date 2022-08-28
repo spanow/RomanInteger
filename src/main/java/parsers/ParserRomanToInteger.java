@@ -1,7 +1,7 @@
 package parsers;
 
 import adapter.StringToRomanAdapter;
-import models.Roman;
+import languages.Roman;
 
 import static utils.RomainToInteger.romanToInt;
 
