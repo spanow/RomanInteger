@@ -1,7 +1,7 @@
 package validator;
 
 
-import romans.Roman;
+import models.Roman;
 
 import java.util.ArrayList;
 import java.util.List;

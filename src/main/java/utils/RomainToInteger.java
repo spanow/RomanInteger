@@ -5,7 +5,7 @@ import exception.InvalidOperationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import parsers.ParserRomanToInteger;
-import romans.Roman;
+import models.Roman;
 import validator.RomanValidator;
 
 import java.util.List;
