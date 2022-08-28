@@ -1,15 +1,7 @@
 package parsers;
 
-import adapters.StringToRomanAdapter;
-import exception.ErrorCodes;
-import exception.InvalidOperationException;
+import adapter.StringToRomanAdapter;
 import romans.Roman;
-import validator.RomanValidator;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.List;
 
 import static utils.RomainToInteger.romanToInt;
 
@@ -39,7 +31,9 @@ public final class ParserRomanToInteger implements ParserToInteger{
   @Override
   public int parse(String toParse) {
     Roman roman = StringToRomanAdapter.stringToRoman(toParse);
-    return romanToInt(roman);
+    int translation = romanToInt(roman);
+    roman.setValue(translation);
+    return translation;
 
   }
 
