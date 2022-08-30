@@ -66,16 +66,14 @@ public class RomanValidator {
     int occurenceL = 0;
     int occurenceD = 0;
     for(int i =0; i<writing.length();i++){
-      if(writing.charAt(i) == current){
-        if(current=='V')
+        if(writing.charAt(i)=='V')
           occurenceV++;
-        if(current=='L')
+        if(writing.charAt(i)=='L')
           occurenceL++;
-        if(current=='D')
+        if(writing.charAt(i)=='D')
           occurenceD++;
         if(occurenceV==2 || occurenceD==2 || occurenceL==2)
           return false;
-      }
     }
     current = writing.charAt(0);
     for(int i =0; i<writing.length();i++){
@@ -84,8 +82,10 @@ public class RomanValidator {
         if(occurence==4)
           return false;
       }
-      else
+      else {
+        current = writing.charAt(i);
         occurence = 0;
+      }
     }
     return true;
 

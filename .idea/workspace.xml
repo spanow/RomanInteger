@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1d0fb98-7936-4b5c-9615-297ad1e71232" name="Changes" comment="Commit pour suivre le format demandé">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RomainToInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RomainToInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validator/RomanValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/RomanValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RomanTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RomanTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
       <recent name="C:\Users\Peykassos\Desktop\RomainInteger" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RomanTestCase.testRomanUn">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="RomainInteger" />
@@ -84,9 +82,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.RomanTestCase.testRomanUn" />
         <item itemvalue="JUnit.RomanTestCase" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -101,7 +99,7 @@
       <workItem from="1661695739772" duration="2999000" />
       <workItem from="1661727306310" duration="304000" />
       <workItem from="1661863731120" duration="434000" />
-      <workItem from="1661864184421" duration="5046000" />
+      <workItem from="1661864184421" duration="5822000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1661695910162</created>
@@ -152,7 +150,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661866531753</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit pour suivre le format demandé">
+      <created>1661869708396</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661869708396</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Commit pour suivre le format demandé">
+      <created>1661869839769</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1661869839769</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,5 +185,21 @@
     <MESSAGE value="Commit" />
     <MESSAGE value="Commit pour suivre le format demandé" />
     <option name="LAST_COMMIT_MESSAGE" value="Commit pour suivre le format demandé" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/validator/RomanValidator.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/validator/RomanValidator.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
