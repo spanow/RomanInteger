@@ -9,6 +9,6 @@ public class RomanTestCase {
 
   @Test
   public void testRomanUn() {
-    assertEquals(1, ParserFacade.parse("Roman","I"));
+    assertEquals(15, ParserFacade.parse("Roman","XV"));
   }
 }
