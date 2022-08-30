@@ -31,6 +31,7 @@ public class RomanValidator {
   private static boolean validateRomanWriting(String writing){
     if (writing.length()==0)
       return false;
+    return validateRepetition(writing);
 //    for(int i=0;i<writing.length()-1;i++){
 //      if(writing.charAt(i) != 'I' && writing.charAt(i) != 'X' && writing.charAt(i) != 'M' &&writing.charAt(i) != 'V' &&writing.charAt(i) != 'L' &&writing.charAt(i) != 'C'&& writing.charAt(i) != 'D')
 //        return false;
@@ -44,8 +45,24 @@ public class RomanValidator {
 //        return false;
 //      }
 //    }
+  }
 
+  private static boolean validateRepetition(String writing){
+    int occurence = 0;
+    char current = writing.charAt(0);
+    for(int i =0; i<writing.length();i++){
+      if(writing.charAt(i) == current){
+        occurence++;
+        if(occurence == 2 && (current!='I' && current!='X' && current!='C'))
+          return false;
+        if(occurence==4)
+          return false;
+      }
+      else
+        occurence = 0;
+    }
     return true;
+
   }
 
 }
