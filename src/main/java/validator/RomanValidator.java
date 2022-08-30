@@ -1,6 +1,8 @@
 package validator;
 
 
+import exception.ErrorCodes;
+import exception.InvalidOperationException;
 import languages.Roman;
 
 import java.util.ArrayList;
@@ -50,14 +52,35 @@ public class RomanValidator {
 
   }
 
+  public static boolean validateSoustraction(char c, char b){
+    if((c=='I'&&b=='V') || (c=='I'&&b=='X') || (c=='X'&&b=='L') || (c=='X'&&b=='C') || (c=='C'&&b=='D') || (c=='C'&&b=='M')){
+      return true;
+    }
+    throw new InvalidOperationException("Le chiffre romain n'est pas valide", ErrorCodes.ROMAN_IS_NOT_VALID);
+  }
+
   private static boolean validateRepetition(String writing){
-    int occurence = 0;
     char current = writing.charAt(0);
+    int occurence = 0;
+    int occurenceV = 0;
+    int occurenceL = 0;
+    int occurenceD = 0;
+    for(int i =0; i<writing.length();i++){
+      if(writing.charAt(i) == current){
+        if(current=='V')
+          occurenceV++;
+        if(current=='L')
+          occurenceL++;
+        if(current=='D')
+          occurenceD++;
+        if(occurenceV==2 || occurenceD==2 || occurenceL==2)
+          return false;
+      }
+    }
+    current = writing.charAt(0);
     for(int i =0; i<writing.length();i++){
       if(writing.charAt(i) == current){
         occurence++;
-        if(occurence == 2 && (current!='I' && current!='X' && current!='C'))
-          return false;
         if(occurence==4)
           return false;
       }

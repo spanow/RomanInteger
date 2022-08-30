@@ -29,6 +29,7 @@ public class RomainToInteger {
         x = current;
         somme += x;
       }else{
+        RomanValidator.validateSoustraction(s.charAt(i),s.charAt(i+1));
         somme -= current;
       }
     }

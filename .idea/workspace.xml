@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e1d0fb98-7936-4b5c-9615-297ad1e71232" name="Changes" comment="Commit pour suivre le format demandé">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RomainToInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RomainToInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/RomanValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/RomanValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RomanTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RomanTestCase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +101,7 @@
       <workItem from="1661695739772" duration="2999000" />
       <workItem from="1661727306310" duration="304000" />
       <workItem from="1661863731120" duration="434000" />
-      <workItem from="1661864184421" duration="2188000" />
+      <workItem from="1661864184421" duration="5046000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1661695910162</created>
@@ -143,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661865923246</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Commit pour suivre le format demandé">
+      <created>1661866531753</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661866531753</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,16 +173,5 @@
     <MESSAGE value="Commit" />
     <MESSAGE value="Commit pour suivre le format demandé" />
     <option name="LAST_COMMIT_MESSAGE" value="Commit pour suivre le format demandé" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/validator/RomanValidator.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
