@@ -1,5 +1,5 @@
 package parsers;
 
 public interface ParserToInteger {
-  int parse(String toParse);
+    int parse(String toParse);
 }

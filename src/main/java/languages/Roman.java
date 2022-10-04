@@ -1,7 +1,14 @@
 package languages;
 
-public class Roman extends AbstractLanguage{
-  public Roman(String writing, int value) {
-    super(writing,value);
-  }
+import lombok.Data;
+
+@Data
+public class Roman {
+    private String writing;
+    private int value;
+
+    public Roman(String writing, int value) {
+        this.writing = writing;
+        this.value = value;
+    }
 }

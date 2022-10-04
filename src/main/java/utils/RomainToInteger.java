@@ -8,52 +8,58 @@ import parsers.ParserRomanToInteger;
 import languages.Roman;
 import validator.RomanValidator;
 
+import java.util.AbstractMap;
+import java.util.HashMap;
 import java.util.List;
 
 public class RomainToInteger {
-  private static Logger LOG = LoggerFactory.getLogger(ParserRomanToInteger.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ParserRomanToInteger.class);
+    private static HashMap<Character, Integer> values = new HashMap();
 
-  public static int romanToInt(Roman roman){
-    List<String> errors = RomanValidator.validate(roman);
-    if (!errors.isEmpty()) {
-      LOG.error("Roman is not valid {}", roman);
-      throw new InvalidOperationException("Le chiffre romain n'est pas valide", ErrorCodes.ROMAN_IS_NOT_VALID, errors);
+    static {
+        values.put('I', 1);
+        values.put('V', 5);
+        values.put('X', 10);
+        values.put('L', 50);
+        values.put('C', 100);
+        values.put('D', 500);
+        values.put('M', 1000);
     }
-    String s = roman.getWriting();
-    int somme = 0;
-    int x = 0;
 
-    for( int i = s.length()-1; i >= 0; i--){
-      int current = valueOfRomanLetter((s.charAt(i)));
-      if( current >= x ){
-        x = current;
-        somme += x;
-      }else{
-        RomanValidator.validateSoustraction(s.charAt(i),s.charAt(i+1));
-        somme -= current;
-      }
+
+    public RomainToInteger(){
+
     }
-    return somme;
-  }
-  static int valueOfRomanLetter(char lettre) {
-    switch (lettre) {
-      case 'I':
-        return 1;
-      case 'V':
-        return 5;
-      case 'X':
-        return 10;
-      case 'L':
-        return 50;
-      case 'C':
-        return 100;
-      case 'D':
-        return 500;
-      case 'M':
-        return 1000;
-      default:
+    public int romanToInt(Roman roman) {
+        List<String> errors = RomanValidator.validate(roman);
+        if (!errors.isEmpty()) {
+            LOG.error("Roman is not valid {}", roman);
+            throw new InvalidOperationException("The Roman Numeral is not Valid", ErrorCodes.ROMAN_IS_NOT_VALID, errors);
+        }
+        String s = roman.getWriting();
+        int somme = 0;
+        int x = 0;
+
+        for (int i = s.length() - 1; i >= 0; i--) {
+            int current = valueOfRomanLetter((s.charAt(i)));
+            if (current >= x) {
+                x = current;
+                somme += x;
+            } else {
+                RomanValidator.validateSoustraction(s.charAt(i), s.charAt(i + 1));
+                somme -= current;
+            }
+        }
+        return somme;
+    }
+
+    private static int valueOfRomanLetter(char lettre) {
+
+        if (values.containsKey(Character.valueOf(lettre))) {
+            return values.get(lettre);
+        }
         throw new NumberFormatException(
-          "Illegal character \"" + lettre + "\" in Roman numeral");
+                "Illegal character \"" + lettre + "\" in Roman numeral");
     }
-  }
 }
+

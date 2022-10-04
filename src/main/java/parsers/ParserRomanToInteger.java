@@ -1,50 +1,25 @@
 package parsers;
 
-import adapter.StringToRomanAdapter;
 import languages.Roman;
-
-import static utils.RomainToInteger.romanToInt;
-
-public final class ParserRomanToInteger implements ParserToInteger{
-  private static volatile ParserRomanToInteger instance;
+import utils.RomainToInteger;
 
 
-  private ParserRomanToInteger() {
-  }
+public final class ParserRomanToInteger implements ParserToInteger {
 
-  public static ParserRomanToInteger getInstance() {
 
-    ParserRomanToInteger result = instance;
-    if (result != null) {
-      return result;
+    public ParserRomanToInteger() {
     }
-    synchronized(ParserRomanToInteger.class) {
-      if (instance == null) {
-        instance = new ParserRomanToInteger();
-      }
-      return instance;
+
+
+    @Override
+    public int parse(String toParse) {
+        Roman roman = new Roman(toParse, 0);
+        RomainToInteger romanToInteger= new RomainToInteger();
+        int translation = romanToInteger.romanToInt(roman);
+        roman.setValue(translation);
+        return translation;
+
     }
-  }
-
-
-
-  @Override
-  public int parse(String toParse) {
-    Roman roman = StringToRomanAdapter.stringToRoman(toParse);
-    int translation = romanToInt(roman);
-    roman.setValue(translation);
-    return translation;
-
-  }
-
-
-
-
-
-
-
-
-
 
 
 }

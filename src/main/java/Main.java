@@ -1,8 +1,9 @@
-import facade.ParserFacade;;
+import parsers.ParserFactory;
+import parsers.ParserToInteger;;
 
 public class Main {
-  public static void main(String args[]) {
-    System.out.println(ParserFacade.parse("Roman", "MMMDDCCXXIV"));
-
-  }
+    public static void main(String args[]) {
+        ParserToInteger parserToInteger = ParserFactory.getParser();
+        System.out.println(parserToInteger.parse("XX"));
+    }
 }
