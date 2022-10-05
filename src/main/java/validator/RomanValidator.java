@@ -10,7 +10,7 @@ import java.util.List;
 
 public class RomanValidator {
 
-    public static List<String> validate(Roman roman) {
+    public List<String> validate(Roman roman) {
         List<String> errors = new ArrayList<>();
 
         if (roman == null) {
@@ -30,7 +30,7 @@ public class RomanValidator {
     }
 
 
-    private static boolean validateRomanWriting(String writing) {
+    private boolean validateRomanWriting(String writing) {
         if (writing.length() == 0) return false;
         for (int i = 0; i < writing.length() - 1; i++) {
             if (writing.charAt(i) == 'V' && writing.charAt(i + 1) == 'X') return false;
@@ -39,14 +39,14 @@ public class RomanValidator {
 
     }
 
-    public static boolean validateSoustraction(char c, char b) {
+    public boolean validateSoustraction(char c, char b) {
         if ((c == 'I' && b == 'V') || (c == 'I' && b == 'X') || (c == 'X' && b == 'L') || (c == 'X' && b == 'C') || (c == 'C' && b == 'D') || (c == 'C' && b == 'M')) {
             return true;
         }
         throw new InvalidOperationException("Le chiffre romain n'est pas valide", ErrorCodes.ROMAN_IS_NOT_VALID);
     }
 
-    private static boolean validateRepetition(String writing) {
+    private boolean validateRepetition(String writing) {
         char current;
         int occurence = 0;
         int occurenceV = 0;

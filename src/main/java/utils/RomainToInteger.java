@@ -8,7 +8,6 @@ import parsers.ParserRomanToInteger;
 import languages.Roman;
 import validator.RomanValidator;
 
-import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.List;
 
@@ -31,7 +30,8 @@ public class RomainToInteger {
 
     }
     public int romanToInt(Roman roman) {
-        List<String> errors = RomanValidator.validate(roman);
+        RomanValidator romanValidator= new RomanValidator();
+        List<String> errors = romanValidator.validate(roman);
         if (!errors.isEmpty()) {
             LOG.error("Roman is not valid {}", roman);
             throw new InvalidOperationException("The Roman Numeral is not Valid", ErrorCodes.ROMAN_IS_NOT_VALID, errors);
@@ -46,7 +46,7 @@ public class RomainToInteger {
                 x = current;
                 somme += x;
             } else {
-                RomanValidator.validateSoustraction(s.charAt(i), s.charAt(i + 1));
+                romanValidator.validateSoustraction(s.charAt(i), s.charAt(i + 1));
                 somme -= current;
             }
         }
